@@ -1,0 +1,58 @@
+[
+  {
+    "query": "What is the minimum attendance required to sit for exams?",
+    "expected_keywords": [
+      "73%"
+    ],
+    "in_domain": true
+  },
+  {
+    "query": "My attendance is 68%, can I still take the exam?",
+    "expected_keywords": [
+      "condonation",
+      "medical certificate"
+    ],
+    "in_domain": true
+  },
+  {
+    "query": "How much do CIA and end-semester exams count toward my grade?",
+    "expected_keywords": [
+      "40%",
+      "60%"
+    ],
+    "in_domain": true
+  },
+  {
+    "query": "What grade do I need to pass a course?",
+    "expected_keywords": [
+      "P",
+      "4"
+    ],
+    "in_domain": true
+  },
+  {
+    "query": "I got caught copying on my first assignment, what happens to me?",
+    "expected_keywords": [
+      "zero",
+      "warning"
+    ],
+    "in_domain": true
+  },
+  {
+    "query": "How long can I take a leave of absence for?",
+    "expected_keywords": [
+      "two semesters"
+    ],
+    "in_domain": true
+  },
+  {
+    "query": "What's a good recipe for chocolate chip cookies?",
+    "expected_keywords": [],
+    "in_domain": false
+  },
+  {
+    "query": "Who won the last FIFA World Cup?",
+    "expected_keywords": [],
+    "in_domain": false
+  }
+]

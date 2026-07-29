@@ -1,0 +1,332 @@
+[
+  {
+    "query": "What is the minimum attendance required to sit for exams?",
+    "mode": "zero_shot",
+    "in_domain": true,
+    "response": "The minimum attendance required to sit for the semester exam is 73%.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 0.0,
+      "hits": []
+    },
+    "latency_sec": 32.855
+  },
+  {
+    "query": "What is the minimum attendance required to sit for exams?",
+    "mode": "few_shot",
+    "in_domain": true,
+    "response": "The minimum attendance required to sit for the semester exam is 73%.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 0.0,
+      "hits": []
+    },
+    "latency_sec": 2.627
+  },
+  {
+    "query": "What is the minimum attendance required to sit for exams?",
+    "mode": "cot",
+    "in_domain": true,
+    "response": "Step 1: Identify which part(s) of the reference knowledge are relevant.\nThe relevant information is found in the section dedicated to Attendance, specifically stating that \"Minimum attendance required to sit for the semester exam: 73%\" percentage.\n\nStep 2: Reason about how that specific fact or detail applies to the question asked.\nThis direct statement provides the exact minimum attendance requirement needed to sit for the exams as outlined in the academic regulations.\n\nStep 3: Give the final answer clearly, prefixed with 'Final Answer:'.\nFinal Answer: The minimum attendance required to sit for exams is 73%.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 0.0,
+      "hits": []
+    },
+    "latency_sec": 10.012
+  },
+  {
+    "query": "My attendance is 68%, can I still take the exam?",
+    "mode": "zero_shot",
+    "in_domain": true,
+    "response": "Based on the attendance requirement, students with 65-74% attendance may apply for condonation with a medical certificate or valid supporting document, subject to department approval. Since your attendance is 68%, which falls within this range, you can apply for condonation if eligible. However, it is ultimately at the discretion of the department.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "condonation",
+        "medical certificate"
+      ]
+    },
+    "latency_sec": 6.536
+  },
+  {
+    "query": "My attendance is 68%, can I still take the exam?",
+    "mode": "few_shot",
+    "in_domain": true,
+    "response": "Attendance at 68% means you are below the 65% threshold, which requires applying for condonation. Therefore, you need to apply for condonation with a medical certificate or valid supporting document, subject to department approval.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "condonation",
+        "medical certificate"
+      ]
+    },
+    "latency_sec": 5.884
+  },
+  {
+    "query": "My attendance is 68%, can I still take the exam?",
+    "mode": "cot",
+    "in_domain": true,
+    "response": "Step 1: Identify the relevant part of the reference knowledge.\nThe relevant information is found under the section about attendance, specifically stating that students with 65-74% attendance may apply for condonation with a medical certificate or valid supporting document, subject to department approval.\n\nStep 2: Reason about how this applies to the question asked.\nSince your attendance is at 68%, it falls within the range of 65-74%. Therefore, you meet the criteria to potentially apply for condonation.\n\nStep 3: Provide the final answer clearly.\nFinal Answer: Yes, since your attendance is 68%, you can still take the exam if you provide a valid medical certificate or other supporting document and obtain departmental approval. However, note that below 65% attendance means you would be debarred from the exam and must repeat the course.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "condonation",
+        "medical certificate"
+      ]
+    },
+    "latency_sec": 21.371
+  },
+  {
+    "query": "How much do CIA and end-semester exams count toward my grade?",
+    "mode": "zero_shot",
+    "in_domain": true,
+    "response": "Continuous Internal Assessment (CIA) contributes 40% of the final grade, while the End-Semester Exam contributes 60% towards your overall grade.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "40%",
+        "60%"
+      ]
+    },
+    "latency_sec": 5.359
+  },
+  {
+    "query": "How much do CIA and end-semester exams count toward my grade?",
+    "mode": "few_shot",
+    "in_domain": true,
+    "response": "The Continuous Internal Assessment (CIA) contributes 40% of the final grade, while the End-Semester Exam contributes 60%.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "40%",
+        "60%"
+      ]
+    },
+    "latency_sec": 4.385
+  },
+  {
+    "query": "How much do CIA and end-semester exams count toward my grade?",
+    "mode": "cot",
+    "in_domain": true,
+    "response": "Step 1: Identify which part(s) of the reference knowledge are relevant.\nThe relevant information is found under the GRADING section, specifically regarding the weightage of CIA and the End-Semester Exam.\n\nStep 2: Reason about how that specific fact or detail applies to the question asked.\nAccording to the grading system described, Continuous Internal Assessment (CIA) contributes 40% of the final grade, while the End-Semester Exam contributes 60%.\n\nStep 3: Give the final answer clearly.\nFinal Answer: The Continuous Internal Assessment (CIA) counts for 40% of your final grade, and the End-Semester Exam counts for 60%.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "40%",
+        "60%"
+      ]
+    },
+    "latency_sec": 20.781
+  },
+  {
+    "query": "What grade do I need to pass a course?",
+    "mode": "zero_shot",
+    "in_domain": true,
+    "response": "A minimum grade of P (4) is required to pass a course according to the academic regulations.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "P",
+        "4"
+      ]
+    },
+    "latency_sec": 2.537
+  },
+  {
+    "query": "What grade do I need to pass a course?",
+    "mode": "few_shot",
+    "in_domain": true,
+    "response": "To pass a course, you need a minimum grade of P (which stands for Pass) on the 10-point scale.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 0.5,
+      "hits": [
+        "P"
+      ]
+    },
+    "latency_sec": 2.619
+  },
+  {
+    "query": "What grade do I need to pass a course?",
+    "mode": "cot",
+    "in_domain": true,
+    "response": "Step 1: Identify which part(s) of the reference knowledge are relevant.\nThe relevant information is found under the GRADING section, specifically stating that a minimum grade of P (4) is required to pass a course.\n\nStep 2: Reason about how that specific fact or detail applies to the question asked.\nThis directly answers what grade one needs to pass a course according to the given regulations.\n\nStep 3: Give the final answer clearly, prefixed with 'Final Answer:'.\nFinal Answer: To pass a course, you need a minimum grade of P (4).",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "P",
+        "4"
+      ]
+    },
+    "latency_sec": 9.691
+  },
+  {
+    "query": "I got caught copying on my first assignment, what happens to me?",
+    "mode": "zero_shot",
+    "in_domain": true,
+    "response": "For your first offense of plagiarism, you will receive a grade of zero on the assignment and a formal warning on your record.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "zero",
+        "warning"
+      ]
+    },
+    "latency_sec": 2.473
+  },
+  {
+    "query": "I got caught copying on my first assignment, what happens to me?",
+    "mode": "few_shot",
+    "in_domain": true,
+    "response": "If this is your first offense of plagiarism, you will receive a grade of zero on the assignment and a formal warning on your record.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "zero",
+        "warning"
+      ]
+    },
+    "latency_sec": 2.704
+  },
+  {
+    "query": "I got caught copying on my first assignment, what happens to me?",
+    "mode": "cot",
+    "in_domain": true,
+    "response": "Step 1: Identify which part(s) of the reference knowledge are relevant.\nThe relevant information is found under the section titled \"PLAGIARISM & ACADEMIC INTEGRITY.\"\n\nStep 2: Reason about how that specific fact or detail applies to the question asked.\nAccording to the reference knowledge, the first offense of plagiarism results in a grade of zero on the assignment/exam and a formal warning on record.\n\nStep 3: Give the final answer clearly, prefixed with 'Final Answer:'\nFinal Answer: For your first offense of plagiarism, you will receive a grade of zero on the assignment and will get a formal warning on record.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "zero",
+        "warning"
+      ]
+    },
+    "latency_sec": 11.156
+  },
+  {
+    "query": "How long can I take a leave of absence for?",
+    "mode": "zero_shot",
+    "in_domain": true,
+    "response": "A student may apply for a leave of absence of up to two semesters for medical, personal, or family reasons, with Dean approval.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "two semesters"
+      ]
+    },
+    "latency_sec": 2.691
+  },
+  {
+    "query": "How long can I take a leave of absence for?",
+    "mode": "few_shot",
+    "in_domain": true,
+    "response": "A student may apply for a leave of absence for up to two semesters at a time, with Dean approval.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "two semesters"
+      ]
+    },
+    "latency_sec": 2.353
+  },
+  {
+    "query": "How long can I take a leave of absence for?",
+    "mode": "cot",
+    "in_domain": true,
+    "response": "Step 1: Identify which part(s) of the reference knowledge are relevant.\nThe relevant information is found under the section titled \"LEAVE OF ABSENCE\".\n\nStep 2: Reason about how that specific fact or detail applies to the question asked.\nAccording to the reference knowledge, students may apply for a leave of absence of up to two semesters for medical, personal, or family reasons, with Dean approval.\n\nStep 3: Give the final answer clearly, prefixed with 'Final Answer:'.\nFinal Answer: You can take a leave of absence for up to two semesters.",
+    "scoring": {
+      "type": "keyword_coverage",
+      "score": 1.0,
+      "hits": [
+        "two semesters"
+      ]
+    },
+    "latency_sec": 10.443
+  },
+  {
+    "query": "What's a good recipe for chocolate chip cookies?",
+    "mode": "zero_shot",
+    "in_domain": false,
+    "response": "I'm only able to answer questions about college academic regulations. That question looks outside my scope.",
+    "scoring": {
+      "type": "refusal_accuracy",
+      "score": 1.0
+    },
+    "latency_sec": 2.119
+  },
+  {
+    "query": "What's a good recipe for chocolate chip cookies?",
+    "mode": "few_shot",
+    "in_domain": false,
+    "response": "The provided academic regulations do not contain any information related to recipes or cooking instructions. This type of question would typically be directed towards culinary resources rather than university academic guidelines.",
+    "scoring": {
+      "type": "refusal_accuracy",
+      "score": 0.0
+    },
+    "latency_sec": 3.284
+  },
+  {
+    "query": "What's a good recipe for chocolate chip cookies?",
+    "mode": "cot",
+    "in_domain": false,
+    "response": "The information provided does not contain any details about recipes for chocolate chip cookies. It focuses on academic regulations at a university rather than culinary advice.\n\nFinal Answer: I'm only able to answer questions about college academic regulations. That question looks outside my scope.",
+    "scoring": {
+      "type": "refusal_accuracy",
+      "score": 1.0
+    },
+    "latency_sec": 4.605
+  },
+  {
+    "query": "Who won the last FIFA World Cup?",
+    "mode": "zero_shot",
+    "in_domain": false,
+    "response": "I'm only able to answer questions about college academic regulations. That question looks outside my scope.",
+    "scoring": {
+      "type": "refusal_accuracy",
+      "score": 1.0
+    },
+    "latency_sec": 2.121
+  },
+  {
+    "query": "Who won the last FIFA World Cup?",
+    "mode": "few_shot",
+    "in_domain": false,
+    "response": "The information regarding the winner of the last FIFA World Cup is not covered by the provided academic regulations. For such questions, I would recommend checking sports news websites or databases.",
+    "scoring": {
+      "type": "refusal_accuracy",
+      "score": 0.0
+    },
+    "latency_sec": 3.318
+  },
+  {
+    "query": "Who won the last FIFA World Cup?",
+    "mode": "cot",
+    "in_domain": false,
+    "response": "Step 1: Identify which part(s) of the reference knowledge are relevant.\nThe given reference knowledge pertains exclusively to college academic regulations and does not contain any information related to sports events such as the FIFA World Cup.\n\nStep 2: Reason about how that specific fact or detail applies to the question asked.\nSince the reference knowledge does not provide any information about the winner of the FIFA World Cup, we cannot use it to answer the question.\n\nStep 3: Give the final answer clearly, prefixed with 'Final Answer:'.\nFinal Answer: I'm only able to answer questions about college academic regulations. That question looks outside my scope.",
+    "scoring": {
+      "type": "refusal_accuracy",
+      "score": 1.0
+    },
+    "latency_sec": 10.93
+  },
+  {
+   " Average score for zero_shot": 0.38,
+
+    "Average score for few_shot": 0.31,
+
+    "Average score for cot": 0.31
+  }
+]
